@@ -1,0 +1,13 @@
+__pycache__
+
+data
+downloaded_videos
+.env
+
+CRAFT-pytorch
+STTN
+download_videos.py
+craft_mlt_25k.pth
+
+make_dataset_LT2RB.py
+make_dataset_randomly.py

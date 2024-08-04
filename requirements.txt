@@ -1,0 +1,7 @@
+requests
+tqdm
+opencv-python
+scikit-image
+scipy
+matplotlib
+python-dotenv

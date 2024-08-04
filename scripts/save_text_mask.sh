@@ -1,0 +1,1 @@
+python main_craft.py --video_path data/video_1_with_subtitles_LT2RB.mp4
