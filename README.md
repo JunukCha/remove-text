@@ -8,7 +8,7 @@ To set up the environment, run the following script:
 source scripts/install.sh
 ```
 
-## Download checkpoints
+## Download Checkpoints
 For the OCR task, refer to the [CRAFT-pytorch](https://github.com/clovaai/CRAFT-pytorch) repository. You can download the general checkpoint and place the `craft_mlt_25k.pth` file in the root folder.
 
 For the inpainting task, refer to the [STTN](https://github.com/researchmm/STTN) repository. Download the checkpoint and place it in `STTN/checkpoints/sttn.pth`.
@@ -49,8 +49,5 @@ To merge the video with the original, the text mask, and the result, run:
 source scripts/vis.sh
 ```
 
-## Merged video
-<video width="640" height="480" controls>
-  <source src="https://raw.githubusercontent.com/JunukCha/remove-text/main/data/video_1_with_subtitles_LT2RB_merged.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+## Visualization of the Merged Video
+<img src="https://github.com/user-attachments/assets/c2220ed0-fe52-4c97-b06f-5c2fe85899cc">
