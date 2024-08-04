@@ -51,6 +51,6 @@ source scripts/vis.sh
 
 ## Merged video
 <video width="640" height="480" controls>
-  <source src="https://github.com/JunukCha/remove-text/blob/cf21d74bac9fe48ed647191ddd092ebaede5c1ad/data/video_1_with_subtitles_LT2RB_merged.mp4" type="video/mp4">
+  <source src="https://raw.githubusercontent.com/JunukCha/remove-text/main/data/video_1_with_subtitles_LT2RB_merged.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
