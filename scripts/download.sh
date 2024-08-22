@@ -1,0 +1,3 @@
+wget -O checkpoints/craft_mlt_25k.pth --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ'
+wget -O checkpoints/sttn.pth --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=1ZAMV8547wmZylKRt5qR_tC5VlosXD4Wv'
+wget -O checkpoints/MIAVSR_REDS_x4.pth --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=19UBJeHpD64D-J8tkpHaXM2MRD1nu1ebJ'

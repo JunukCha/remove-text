@@ -5,3 +5,4 @@ scikit-image
 scipy
 matplotlib
 python-dotenv
+basicsr

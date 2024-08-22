@@ -12,11 +12,11 @@ import random
 sys.path.append(osp.join(osp.dirname(__file__), "CRAFT-pytorch"))
 
 # Importing CRAFT model related modules
-from craft import CRAFT
-from craft_utils import getDetBoxes, adjustResultCoordinates
-from imgproc import resize_aspect_ratio, normalizeMeanVariance
+from lib.craft.craft import CRAFT
+from lib.craft.craft_utils import getDetBoxes, adjustResultCoordinates
+from lib.craft.imgproc import resize_aspect_ratio, normalizeMeanVariance
 
-def load_craft_model(model_path='craft_mlt_25k.pth'):
+def load_craft_model(model_path='checkpoints/craft_mlt_25k.pth'):
     """Load the CRAFT text detection model."""
     net = CRAFT()
     state_dict = torch.load(model_path, map_location='cpu')
@@ -90,10 +90,10 @@ def save_mask(mask, output_dir, frame_index):
     mask_path = os.path.join(output_dir, f"{frame_index:05d}.png")
     cv2.imwrite(mask_path, mask)
 
-def process_video(video_path):
+def process_video(video_path, pth_path):
     """Process the video, detect and mask text regions, and save the results."""
     cap = cv2.VideoCapture(video_path)
-    craft_net = load_craft_model()
+    craft_net = load_craft_model(pth_path)
     
     frame_index = 0
 
@@ -130,5 +130,6 @@ def process_video(video_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--video_path", required=True, help="Path to the input video file.")
+    parser.add_argument("--pth_path", required=True, help="Path to the pth file.")
     args = parser.parse_args()
-    process_video(args.video_path)
+    process_video(args.video_path, args.pth_path)
