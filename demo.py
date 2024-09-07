@@ -6,7 +6,7 @@ import torch
 import argparse
 from archs.mia_vsr_arch import MIAVSR
 from basicsr.data.data_util import read_img_seq
-from basicsr.utils import get_time_str, imwrite, tensor2img
+from basicsr.utils import imwrite, tensor2img
 
 
 def main(args):
