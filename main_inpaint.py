@@ -91,7 +91,7 @@ def main_worker():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     net = importlib.import_module('model.' + args.model)
     model = net.InpaintGenerator().to(device)
-    model_path = args.ckpt
+
     data = torch.load(args.ckpt, map_location=device)
     model.load_state_dict(data['netG'])
     print('loading from: {}'.format(args.ckpt))
@@ -137,12 +137,10 @@ def main_worker():
                         np.float32)*0.5 + img.astype(np.float32)*0.5
     writer = cv2.VideoWriter(f"{args.mask}_result.mp4", cv2.VideoWriter_fourcc(*"mp4v"), default_fps, (w, h))
 
-    os.makedirs(f"{args.mask}_result", exist_ok=True)
     for f in range(video_length):
         comp = np.array(comp_frames[f]).astype(
             np.uint8)*binary_masks[f] + frames[f] * (1-binary_masks[f])
         writer.write(cv2.cvtColor(np.array(comp).astype(np.uint8), cv2.COLOR_BGR2RGB))
-        cv2.imwrite(f"{args.mask}_result/{f:05d}.jpg", cv2.cvtColor(np.array(comp).astype(np.uint8), cv2.COLOR_BGR2RGB))
     writer.release()
     print('Finish in {}'.format(f"{args.mask}_result.mp4"))
 
