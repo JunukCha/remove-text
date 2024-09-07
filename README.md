@@ -9,25 +9,23 @@ source scripts/install.sh
 ```
 
 ## Download Checkpoints
-For the OCR task, refer to the [CRAFT-pytorch](https://github.com/clovaai/CRAFT-pytorch) repository. You can download the general checkpoint and place the `craft_mlt_25k.pth` file in the root folder.
-
-For the inpainting task, refer to the [STTN](https://github.com/researchmm/STTN) repository. Download the checkpoint and place it in `STTN/checkpoints/sttn.pth`.
+`scripts/download.sh`
 
 Your final folder structure should look like this:
 
 ```
 (root)
+├── archs
+├── checkpoints
 ├── data
 ├── scripts
-├── CRAFT-pytorch
-├── STTN
-│   └── checkpoints
-│       └── sttn.pth
+├── lib
 ├── .gitignore
 ├── main_craft.py
+├── main_inpaint.py
+├── main_sr.py
 ├── requirements.txt
-├── visualization.py
-└── craft_mlt_25k.pth
+└── visualization.py
 ```
 
 ## Inference
