@@ -4,8 +4,6 @@ data
 downloaded_videos
 .env
 
-CRAFT-pytorch
-STTN
 download_videos.py
 craft_mlt_25k.pth
 
