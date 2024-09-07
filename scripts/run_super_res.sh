@@ -1,0 +1,1 @@
+python main_sr.py --model_path checkpoints/MIAVSR_REDS_x4.pth --input_path data/video_1_with_subtitles_LT2RB_result.mp4

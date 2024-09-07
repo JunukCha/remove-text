@@ -1,3 +1,4 @@
-wget -O checkpoints/craft_mlt_25k.pth --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ'
-wget -O checkpoints/sttn.pth --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=1ZAMV8547wmZylKRt5qR_tC5VlosXD4Wv'
-wget -O checkpoints/MIAVSR_REDS_x4.pth --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=19UBJeHpD64D-J8tkpHaXM2MRD1nu1ebJ'
+wget -O checkpoints/craft_mlt_25k.pth --no-check-certificate -r 'https://drive.usercontent.google.com/download?id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ&export=download&confirm=t'
+wget -O checkpoints/sttn.pth --no-check-certificate -r 'https://drive.usercontent.google.com/download?id=1ZAMV8547wmZylKRt5qR_tC5VlosXD4Wv&export=download&confirm=t'
+wget -O checkpoints/MIAVSR_REDS_x4.pth --no-check-certificate -r 'https://drive.usercontent.google.com/download?id=19UBJeHpD64D-J8tkpHaXM2MRD1nu1ebJ&export=download&confirm=t'
+wget -O checkpoints/spynet_sintel_final-3d2a1287.pth --no-check-certificate -r 'https://github.com/JingyunLiang/VRT/releases/download/v0.0/spynet_sintel_final-3d2a1287.pth'
