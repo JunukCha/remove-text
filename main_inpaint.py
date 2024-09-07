@@ -88,7 +88,7 @@ def read_frame_from_videos(vname):
 
 def main_worker():
     # set up models 
-    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     net = importlib.import_module('model.' + args.model)
     model = net.InpaintGenerator().to(device)
     model_path = args.ckpt
@@ -136,10 +136,13 @@ def main_worker():
                     comp_frames[idx] = comp_frames[idx].astype(
                         np.float32)*0.5 + img.astype(np.float32)*0.5
     writer = cv2.VideoWriter(f"{args.mask}_result.mp4", cv2.VideoWriter_fourcc(*"mp4v"), default_fps, (w, h))
+
+    os.makedirs(f"{args.mask}_result", exist_ok=True)
     for f in range(video_length):
         comp = np.array(comp_frames[f]).astype(
             np.uint8)*binary_masks[f] + frames[f] * (1-binary_masks[f])
         writer.write(cv2.cvtColor(np.array(comp).astype(np.uint8), cv2.COLOR_BGR2RGB))
+        cv2.imwrite(f"{args.mask}_result/{f:05d}.jpg", cv2.cvtColor(np.array(comp).astype(np.uint8), cv2.COLOR_BGR2RGB))
     writer.release()
     print('Finish in {}'.format(f"{args.mask}_result.mp4"))
 
