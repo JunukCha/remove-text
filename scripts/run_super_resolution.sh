@@ -1,1 +1,0 @@
-python main_super_resolution.py --model_path checkpoints/MIAVSR_REDS_x4.pth --lr_folder data/video_1_with_subtitles_LT2RB_results
