@@ -6,3 +6,5 @@ scipy
 matplotlib
 python-dotenv
 basicsr
+timm
+einops
