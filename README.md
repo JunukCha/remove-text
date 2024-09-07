@@ -47,5 +47,11 @@ To merge the video with the original, the text mask, and the result, run:
 source scripts/vis.sh
 ```
 
+(Optional) Super resolution
+
+```
+source scripts/run_super_res.sh
+```
+
 ## Visualization of the Merged Video
 <img src="https://github.com/user-attachments/assets/c2220ed0-fe52-4c97-b06f-5c2fe85899cc">
